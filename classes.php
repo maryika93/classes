@@ -2,118 +2,71 @@
 
 class Car
 {
-    public $color = 'Black';
-    public $box = 'auto';
-    public function changeColor($color)
+    public $color;
+    public $box;
+    public function __construct($color, $box)
     {
-        $this->color->$color;
-    }
-    public function changeBox($box){
-        $this->box->$box;
+        $this->color = $color;
+        $this->box = $box;
     }
 }
-$mersedes = new Car();
-$lada = new Car();
-$lada->color;
-$lada->changeBox('mehanic');
-$mersedes->changeColor('green');
-$mersedes->box;
+$mersedes = new Car('white', 'mehanic');
+$lada = new Car('red', 'auto');
 
 class TV
 {
-    public $type = 'type';
-    public $size = 'small';
-    public function changeType($type){
-        $this->type->$type;
-    }
-    public function changeSize($size){
-        $this->size->$size;
+    public $type;
+    public $size;
+    public function __construct($type, $size){
+        $this->type=$type;
+        $this->size=$size;
     }
 }
-$LG = new TV();
-$Toshiba = new TV();
-$Toshiba->type;
-$LG->changeType('black&white');
-$LG->size;
-$Toshiba->changeSize('big');
+$LG = new TV('color','small');
+$Toshiba = new TV('bl&wh', 'big');
 
 class Pen
 {
-    public $colorpen = 'blue';
-    public $type = 'expensive';
-    public function changeType($type)
+    public $colorpen;
+    public $type;
+    public function __construct($colorpen, $type)
     {
-        $this->type->$type;
-    }
-    public function changeColor($colorpen)
-    {
-        $this->type->$colorpen;
+        $this->type=$type;
+        $this->colorpen=$colorpen;
     }
 }
-$Parker = new Pen();
-$Pilot = new Pen();
-$Parker->type;
-$Pilot->changeType('cheap');
-$Parker->colorpen;
-$Pilot->changeColor('Black');
+$Parker = new Pen('green', 'free');
+$Pilot = new Pen('black', 'expensive');
 
 class Duck
 {
-    public $size = 'big';
-    public $gend = 'drake';
-    public function changeSize($size)
+    public $size;
+    public $gend;
+    public function __construct($size, $gend)
     {
-        $this->size->$size;
-    }
-    public function changeGend($gend)
-    {
-        $this->gend->$gend;
+        $this->size=$size;
+        $this->gend=$gend;
     }
 }
-$Donald = new Duck();
-$Daisy = new Duck();
-$Donald->gend;
-$Daisy->changeGend('duck');
-$Donald->size;
-$Daisy->changeSize('small');
+$Donald = new Duck('big', 'drake');
+$Daisy = new Duck('small', 'duck');
 
 class Goods
 {
-    public $price = '1000';
-    public $discont = '10';
-    public $pop = 'popular';
-    public $tv = 'Toshiba';
-    public function changePrice($price)
+    public $price;
+    public $discont;
+    public $pop;
+    public $tv;
+    public function __construct($price, $discont, $pop, $tv)
     {
-        $this->price->$price;
-    }
-    public function changeDiskont($discont)
-    {
-        $this->discont->$discont;
-    }
-    public function changePop($pop)
-    {
-        $this->pop->$pop;
-    }
-    public function changeTv($tv)
-    {
-        $this->tv->$tv;
+        $this->price=$price;
+        $this->discont=$discont;
+        $this->pop=$pop;
+        $this->tv=$tv;
     }
 }
-$First = new Goods();
-$Second = new Goods();
-$Third = new Goods();
-$First->price;
-$First->changeDiskont('35');
-$First->pop;
-$First->tv;
-$Second->price;
-$Second->discont;
-$Second->changePop('unpopular');
-$Second->changeTv('Tomas');
-$Third->changePrice(5000);
-$Third->changeDiskont('0');
-$Third->pop;
-$Third->changeTv('Sony');
+$First = new Goods('1000', '20', 'popular', 'LG');
+$Second = new Goods('500', '40', 'unpopular', 'Samsung');
+$Third = new Goods('1200', '10', 'popular', 'Toshiba');
 
 ?>
